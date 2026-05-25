@@ -1,0 +1,552 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Egozi — Design Fee Proposal | Juliette Calaf Interiors</title>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Lato:wght@300;400;700&display=swap" rel="stylesheet" />
+<style>
+@media print {
+  body { background: #fff; margin: 0; padding: 0; }
+  .page { box-shadow: none; margin: 0; page-break-after: always; min-height: 100vh; }
+  .page:last-child { page-break-after: avoid; }
+  .no-print { display: none !important; }
+  @page { margin: 0; size: letter; }
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { background: #e8e2db; font-family: "Lato", sans-serif; font-weight: 300; color: #696161; }
+.print-btn { position: fixed; top: 20px; right: 20px; padding: 10px 24px; background: linear-gradient(to right, #BF9180, #B5726C); color: #fff; border: none; border-radius: 6px; font-family: "Lato", sans-serif; font-weight: 700; font-size: 11px; letter-spacing: 2px; text-transform: uppercase; cursor: pointer; z-index: 100; }
+.page { background: #fff; width: 816px; min-height: 1056px; margin: 40px auto; overflow: hidden; display: flex; flex-direction: column; }
+.page-inner { padding: 60px; flex: 1; display: flex; flex-direction: column; }
+.cover { background: #F5F3EF; }
+.cover-top { padding: 52px 64px 32px; }
+.cover-top-row { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 14px; }
+.cover-logo { font-family: "Instrument Serif", Georgia, serif; font-size: 13px; color: #98332C; letter-spacing: 5px; white-space: nowrap; text-transform: uppercase; }
+.cover-doc-type { font-size: 10px; color: #BF9180; letter-spacing: 2px; text-transform: uppercase; text-align: right; line-height: 1.8; }
+.cover-rule { height: 1px; background: #98332C; opacity: 0.3; }
+.cover-mid { flex: 1; display: flex; flex-direction: column; justify-content: center; padding: 0 64px 40px; }
+.cover-big-letter { font-family: "Instrument Serif", Georgia, serif; font-size: 160px; color: #e8e2db; line-height: 1; margin-bottom: -18px; font-weight: 400; }
+.cover-client { font-family: "Instrument Serif", Georgia, serif; font-size: 76px; color: #3d3a38; font-weight: 400; line-height: 1.05; margin-bottom: 16px; letter-spacing: 8px; }
+.cover-project { font-size: 14px; color: #BF9180; letter-spacing: 3px; text-transform: uppercase; margin-bottom: 10px; }
+.cover-location { font-size: 13px; color: #696161; letter-spacing: 1px; }
+.cover-bottom { padding: 22px 64px; border-top: 1px solid #e8e2db; display: flex; justify-content: space-between; align-items: center; }
+.cover-prepared { font-size: 10px; color: #BF9180; letter-spacing: 1px; line-height: 1.8; }
+.cover-tagline { font-family: "Instrument Serif", Georgia, serif; font-style: italic; font-size: 11px; color: #BF9180; }
+.ph { display: flex; justify-content: space-between; align-items: flex-end; margin-bottom: 10px; }
+.ph-logo { font-family: "Instrument Serif", Georgia, serif; font-size: 11px; color: #98332C; letter-spacing: 4px; text-transform: uppercase; }
+.ph-client { font-size: 10px; color: #BF9180; letter-spacing: 1px; text-align: right; line-height: 1.7; }
+.ph-rule { height: 1px; background: #98332C; opacity: 0.25; margin-bottom: 36px; }
+.sec-num { font-size: 9px; color: #BF9180; letter-spacing: 3px; text-transform: uppercase; margin-bottom: 6px; }
+.sec-title { font-family: "Instrument Serif", Georgia, serif; font-size: 26px; font-weight: 400; color: #3d3a38; margin-bottom: 14px; }
+.sec-divider { width: 48px; height: 2px; background: #BF9180; margin-bottom: 24px; }
+p { font-size: 13px; line-height: 1.85; color: #696161; margin-bottom: 16px; }
+p:last-child { margin-bottom: 0; }
+.pull-quote { padding: 22px 26px; background: #F5F3EF; border-left: 3px solid #BF9180; margin-top: 28px; }
+.pull-quote p { font-family: "Instrument Serif", Georgia, serif; font-style: italic; font-size: 14.5px; color: #3d3a38; margin: 0; line-height: 1.75; }
+.pq-attr { margin-top: 10px; font-size: 9.5px; color: #BF9180; letter-spacing: 1px; text-transform: uppercase; }
+.room { margin-bottom: 32px; padding-bottom: 32px; border-bottom: 1px solid #f0ebe8; }
+.room:last-child { border-bottom: none; margin-bottom: 0; padding-bottom: 0; }
+.room-name { font-family: "Instrument Serif", Georgia, serif; font-size: 17px; color: #BF9180; margin-bottom: 8px; }
+.fee-table { width: 100%; border-collapse: collapse; margin: 20px 0; }
+.fee-table thead tr { background: #F5F3EF; }
+.fee-table thead th { padding: 10px 14px; text-align: left; font-weight: 700; font-size: 9px; letter-spacing: 1.5px; text-transform: uppercase; color: #696161; border-bottom: 1px solid #e8e2db; }
+.fee-table tbody td { padding: 11px 14px; border-bottom: 1px solid #f5f1ee; color: #696161; font-size: 12.5px; vertical-align: middle; }
+.fee-table .total-row td { background: #F5F3EF; font-weight: 700; color: #BF9180; border-top: 1px solid #e8e2db; border-bottom: none; font-size: 13px; }
+.fee-note { font-size: 11px; color: #696161; font-style: italic; line-height: 1.6; margin-top: 10px; }
+.pay-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin: 20px 0; }
+.pay-item { background: #F5F3EF; padding: 22px 24px; border-radius: 4px; }
+.pay-pct { font-family: "Instrument Serif", Georgia, serif; font-size: 36px; color: #98332C; line-height: 1; margin-bottom: 6px; }
+.pay-label { font-size: 9px; color: #BF9180; letter-spacing: 1.5px; text-transform: uppercase; margin-bottom: 4px; }
+.pay-desc { font-size: 11.5px; color: #696161; line-height: 1.5; }
+.inv-table { width: 100%; border-collapse: collapse; font-size: 11px; }
+.inv-table thead th { padding: 9px 12px; text-align: left; font-size: 9px; letter-spacing: 1px; text-transform: uppercase; }
+.inv-table thead th:first-child { background: #3d3a38; color: #fff; }
+.inv-table thead th:nth-child(2) { background: #F5F3EF; color: #696161; }
+.inv-table thead th:nth-child(3) { background: #d9c8c2; color: #3d3a38; }
+.inv-table thead th:nth-child(4) { background: #BF9180; color: #fff; }
+.inv-table thead th:nth-child(5) { background: #98332C; color: #fff; }
+.inv-table tbody tr:nth-child(odd) { background: #fafaf9; }
+.inv-table tbody tr:nth-child(even) { background: #fff; }
+.inv-table tbody td { padding: 7px 12px; border-bottom: 1px solid #f0ebe8; color: #696161; }
+.inv-table tbody td:first-child { font-weight: 700; color: #3d3a38; }
+.two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; }
+.phase-row { display: flex; gap: 14px; margin-bottom: 22px; }
+.phase-num { font-family: "Instrument Serif", Georgia, serif; font-size: 32px; color: #e8e2db; line-height: 1; flex-shrink: 0; width: 38px; }
+.phase-title { font-weight: 700; font-size: 11px; color: #BF9180; letter-spacing: 1px; text-transform: uppercase; margin-bottom: 3px; }
+.phase-desc { font-size: 12px; color: #696161; line-height: 1.6; }
+.inc-list { list-style: none; padding: 0; }
+.inc-list li { font-size: 12.5px; color: #696161; line-height: 1.7; padding: 9px 0; border-bottom: 1px solid #f5f1ee; display: flex; gap: 12px; align-items: flex-start; }
+.inc-list li:last-child { border-bottom: none; }
+.dot { width: 5px; height: 5px; border-radius: 50%; background: #BF9180; flex-shrink: 0; margin-top: 7px; }
+.excl-box { margin-top: 18px; padding: 14px 18px; background: #F5F3EF; border-radius: 4px; font-size: 11px; line-height: 1.7; }
+.next-page { background: #F5F3EF; }
+.next-inner { padding: 80px 64px; flex: 1; display: flex; flex-direction: column; justify-content: space-between; align-items: center; text-align: center; }
+.steps-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; max-width: 500px; width: 100%; }
+.step-card { background: #fff; border: 1px solid #e8e2db; padding: 20px; border-radius: 6px; text-align: left; }
+.step-n { font-size: 9px; color: #BF9180; letter-spacing: 2px; text-transform: uppercase; margin-bottom: 8px; }
+.step-t { font-size: 12px; color: #3d3a38; line-height: 1.5; }
+.page-footer { padding: 14px 60px; border-top: 1px solid #f0ebe8; display: flex; justify-content: space-between; align-items: center; }
+.footer-tagline { font-family: "Instrument Serif", Georgia, serif; font-style: italic; font-size: 11px; color: #696161; }
+.footer-contact { font-size: 10px; color: #BF9180; }
+.retainer-box { background: #F5F3EF; border-radius: 4px; padding: 28px 30px; margin: 20px 0; }
+.retainer-amount { font-family: "Instrument Serif", Georgia, serif; font-size: 52px; color: #98332C; line-height: 1; margin-bottom: 6px; }
+.retainer-label { font-size: 9px; color: #BF9180; letter-spacing: 2px; text-transform: uppercase; margin-bottom: 10px; }
+.retainer-desc { font-size: 12px; color: #696161; line-height: 1.65; }
+.rate-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin-top: 14px; }
+.rate-card { background: #fff; border: 1px solid #e8e2db; border-radius: 4px; padding: 18px 20px; }
+.rate-amount { font-family: "Instrument Serif", Georgia, serif; font-size: 28px; color: #3d3a38; line-height: 1; margin-bottom: 4px; }
+.rate-role { font-size: 9px; color: #BF9180; letter-spacing: 1.5px; text-transform: uppercase; }
+.scope-list { list-style: none; padding: 0; margin-top: 8px; }
+.scope-list li { font-size: 12px; color: #696161; padding: 5px 0; border-bottom: 1px solid #f5f1ee; display: flex; gap: 10px; align-items: flex-start; }
+.scope-list li:last-child { border-bottom: none; }
+</style>
+</head>
+<body>
+
+<button class="print-btn no-print" onclick="window.print()">Print / Save PDF</button>
+
+<!-- PAGE 1: COVER -->
+<div class="page cover">
+  <div class="cover-top">
+    <div class="cover-top-row">
+      <div class="cover-logo">juliette CALAF interiors</div>
+      <div class="cover-doc-type">Design Fee<br>Proposal</div>
+    </div>
+    <div class="cover-rule"></div>
+  </div>
+  <div class="cover-mid">
+    <div class="cover-big-letter">E</div>
+    <div class="cover-client">Egozi</div>
+    <div class="cover-project">9700 W. Broadview Drive</div>
+    <div class="cover-location">Bay Harbor Islands, Florida</div>
+  </div>
+  <div class="cover-bottom">
+    <div class="cover-prepared">
+      Prepared for Rafy Egozi<br>
+      May 2026
+    </div>
+    <div class="cover-tagline">Confidential &nbsp;/&nbsp; Style Your Story</div>
+  </div>
+</div>
+
+<!-- PAGE 2: WELCOME -->
+<div class="page">
+  <div class="page-inner">
+    <div class="ph">
+      <div class="ph-logo">juliette CALAF interiors</div>
+      <div class="ph-client">Egozi<br>9700 W. Broadview Drive</div>
+    </div>
+    <div class="ph-rule"></div>
+
+    <div class="sec-num">01</div>
+    <div class="sec-title">Welcome</div>
+    <div class="sec-divider"></div>
+
+    <p>The ultimate goal at Juliette Calaf Interiors is for you to enjoy a collaborative and stress-free design experience that results in a beautiful finished project. Our rigorous design sensibility and comprehensive process allows us to create a space that tells your unique story and serves as the backdrop for the life you live in it.</p>
+
+    <p>We specialize in creating spaces with presence, grounded in proportion, architectural balance, and a deep respect for craftsmanship. The result is a quiet, confident aesthetic that feels collected and uniquely yours.</p>
+
+    <p>Our work has been featured in the Wall Street Journal, Traditional Home, Business of Home, Modo de Vida, and several other publications.</p>
+
+    <div class="pull-quote">
+      <p>"Our role is to understand how you use the space and translate that into an environment that feels natural, refined, and built to endure."</p>
+      <div class="pq-attr">— Juliette Calaf, Creative Director</div>
+    </div>
+  </div>
+  <div class="page-footer">
+    <div class="footer-tagline">Style Your Story</div>
+    <div class="footer-contact">juliette@juliettecalaf.com</div>
+  </div>
+</div>
+
+<!-- PAGE 3: ABOUT THIS PROJECT -->
+<div class="page">
+  <div class="page-inner">
+    <div class="ph">
+      <div class="ph-logo">juliette CALAF interiors</div>
+      <div class="ph-client">Egozi<br>9700 W. Broadview Drive</div>
+    </div>
+    <div class="ph-rule"></div>
+
+    <div class="sec-num">02</div>
+    <div class="sec-title">About This Project</div>
+    <div class="sec-divider"></div>
+
+    <p>The residence at 9700 West Broadview Drive is a single-story waterfront home in Bay Harbor Islands — a property with strong bones and a setting that invites an outdoor-centered way of living. Rather than rebuilding from the ground up, the decision to renovate within the existing footprint was a deliberate one, focused on creating something refined and enduring without starting over.</p>
+
+    <p>The design direction for this home is rooted in a Dorado, Balinese, and Tulum-inspired aesthetic: organic forms, natural materials, and a palette of green, white, and bronze that feels at home beside water. The result will be a home that breathes, shades beautifully, and wears well over time.</p>
+
+    <p>Outdoor living is a true priority here. The client entertains frequently and spends most of their time outside, so the exterior — two covered structures, the pool and deck, and the arrival sequence at the entry — will be treated with the same rigor and intentionality as the interior rooms. Every material selection will be made with durability and low maintenance in mind, including iguana-resistant landscaping and hurricane-compliant shading.</p>
+
+    <p>Interior scope centers on the main living areas, kitchen, primary suite, and guest rooms, with attention to ceiling heights, TV placement, and the overall flow from room to room. This is a home that will be lived in fully and entertaining often — and every decision we make will be grounded in that.</p>
+  </div>
+  <div class="page-footer">
+    <div class="footer-tagline">Style Your Story</div>
+    <div class="footer-contact">juliette@juliettecalaf.com</div>
+  </div>
+</div>
+
+<!-- PAGE 4: SCOPE — ENTRY, LIVING, DINING, FAMILY -->
+<div class="page">
+  <div class="page-inner">
+    <div class="ph">
+      <div class="ph-logo">juliette CALAF interiors</div>
+      <div class="ph-client">Egozi<br>9700 W. Broadview Drive</div>
+    </div>
+    <div class="ph-rule"></div>
+
+    <div class="sec-num">03</div>
+    <div class="sec-title">Scope by Room</div>
+    <div class="sec-divider"></div>
+
+    <div class="room">
+      <div class="room-name">Entry / Foyer</div>
+      <p>The arrival experience sets the tone for everything that follows. We will source an entry console, lighting, and curated objects that introduce the Balinese-Tulum direction immediately — layered, grounded, and quietly elevated. Water feature integration at the entry will be considered in close coordination with the exterior scope.</p>
+    </div>
+
+    <div class="room">
+      <div class="room-name">Living Room</div>
+      <p>The living room will be fully furnished and styled to anchor the home's social core. Seating, occasional tables, rugs, decorative lighting, and window treatments will all be selected in natural materials and a green, white, and bronze palette. The louvered wall solution and TV placement resolved during design development will inform the furniture layout from the start.</p>
+    </div>
+
+    <div class="room">
+      <div class="room-name">Dining Room</div>
+      <p>A statement dining table, chairs, and pendant lighting will be selected to hold their own while flowing naturally into the adjacent living and family spaces. Given the client's entertaining lifestyle, the dining room will be treated as a room that performs beautifully for both intimate dinners and larger gatherings.</p>
+    </div>
+
+    <div class="room">
+      <div class="room-name">Family Room</div>
+      <p>The family room will be furnished for daily living — comfortable, layered, and durable. Seating, soft goods, and decorative accessories will complement the reconfigured relationship between this room, the dining area, and the outdoor living spaces beyond. All selections will prioritize ease of maintenance without sacrificing quality.</p>
+    </div>
+  </div>
+  <div class="page-footer">
+    <div class="footer-tagline">Style Your Story</div>
+    <div class="footer-contact">juliette@juliettecalaf.com</div>
+  </div>
+</div>
+
+<!-- PAGE 5: SCOPE — KITCHEN, PRIMARY SUITE -->
+<div class="page">
+  <div class="page-inner">
+    <div class="ph">
+      <div class="ph-logo">juliette CALAF interiors</div>
+      <div class="ph-client">Egozi<br>9700 W. Broadview Drive</div>
+    </div>
+    <div class="ph-rule"></div>
+
+    <div class="room">
+      <div class="room-name">Kitchen</div>
+      <p>All appliance, fixture, cabinet hardware, countertop, and backsplash selections will be managed through JCI. We will refine the kitchen layout in close coordination with the architectural scope and specify every element before any item is ordered. Selections will balance performance and aesthetics, with a strong bias toward materials that age gracefully in a Florida climate.</p>
+    </div>
+
+    <div class="room">
+      <div class="room-name">Primary Bedroom</div>
+      <p>The primary bedroom will be a retreat — calm, natural, and deeply personal. Bed, nightstands, case goods, soft goods, window treatments, and decorative lighting will all be selected within the Dorado-Balinese aesthetic. Ceiling height improvement in this room, if confirmed during design development, will inform the scale and selection of every element.</p>
+    </div>
+
+    <div class="room">
+      <div class="room-name">Primary Bathroom</div>
+      <p>All fixtures, tile, vanity, lighting, mirrors, and accessories will be specified by JCI and presented for approval before purchase. The outdoor shower connected to the primary suite will be considered as a continuation of this scope, ensuring a seamless material and design language from interior to exterior.</p>
+    </div>
+
+    <div class="room">
+      <div class="room-name">Primary Closet</div>
+      <p>Closet organization, lighting, and any finishing selections within the primary closet will be sourced and specified as part of this scope. Selections will be practical, refined, and consistent with the overall material palette of the primary suite.</p>
+    </div>
+  </div>
+  <div class="page-footer">
+    <div class="footer-tagline">Style Your Story</div>
+    <div class="footer-contact">juliette@juliettecalaf.com</div>
+  </div>
+</div>
+
+<!-- PAGE 6: SCOPE — GUEST ROOMS, BATHS, LAUNDRY -->
+<div class="page">
+  <div class="page-inner">
+    <div class="ph">
+      <div class="ph-logo">juliette CALAF interiors</div>
+      <div class="ph-client">Egozi<br>9700 W. Broadview Drive</div>
+    </div>
+    <div class="ph-rule"></div>
+
+    <div class="room">
+      <div class="room-name">Bedroom 2</div>
+      <p>The second bedroom will be fully furnished and styled to offer a comfortable, considered guest experience. Bed, case goods, lighting, soft goods, and window treatments will be selected in a palette that complements the whole-home direction while giving the room its own quiet character.</p>
+    </div>
+
+    <div class="room">
+      <div class="room-name">Bedroom 3</div>
+      <p>Bedroom 3 will receive the same full-furnishing treatment: bed, case goods, lighting, window treatments, and accessories. Layout and scale will be optimized for the room's proportions as shown in the architectural drawings.</p>
+    </div>
+
+    <div class="room">
+      <div class="room-name">Guest Bathrooms</div>
+      <p>All tile, fixtures, vanity lighting, mirrors, and accessories for the guest bathrooms will be selected and specified by JCI. Selections will be cohesive across bathrooms while allowing for subtle differentiation in each space.</p>
+    </div>
+
+    <div class="room">
+      <div class="room-name">Laundry Room</div>
+      <p>Appliance selection, cabinetry hardware, tile, and any finishing details in the laundry room will be managed by JCI. Stackable washer and dryer placement confirmed per the floor plan; all finishes will be specified to close out this space cleanly.</p>
+    </div>
+  </div>
+  <div class="page-footer">
+    <div class="footer-tagline">Style Your Story</div>
+    <div class="footer-contact">juliette@juliettecalaf.com</div>
+  </div>
+</div>
+
+<!-- PAGE 7: SCOPE — EXTERIOR -->
+<div class="page">
+  <div class="page-inner">
+    <div class="ph">
+      <div class="ph-logo">juliette CALAF interiors</div>
+      <div class="ph-client">Egozi<br>9700 W. Broadview Drive</div>
+    </div>
+    <div class="ph-rule"></div>
+
+    <div class="room">
+      <div class="room-name">Covered Lounge Gazebo</div>
+      <p>The covered outdoor lounge will be furnished as a true outdoor living room — seating, a coffee table, soft goods appropriate for exterior use, and lighting selections that extend the home's ambiance into the evening. All materials will be specified for durability, UV resistance, and hurricane compliance.</p>
+    </div>
+
+    <div class="room">
+      <div class="room-name">Outdoor Dining and Barbecue Gazebo</div>
+      <p>The outdoor dining and barbecue zone will be furnished with a dining table, chairs, and all equipment and accessory selections coordinated through JCI. This space will be designed to perform at the client's entertaining scale — functional, beautiful, and built to handle South Florida conditions.</p>
+    </div>
+
+    <div class="room">
+      <div class="room-name">Pool Deck</div>
+      <p>Pool deck furniture — loungers, side tables, umbrellas or shade structures — will all be selected and sourced through JCI. Tile and deck finish selections will be coordinated in alignment with the pool scope and the overall exterior palette. Layered shading solutions will be addressed here in response to the west-facing sun exposure.</p>
+    </div>
+
+    <div class="room">
+      <div class="room-name">Outdoor Shower and Entry Landscaping</div>
+      <p>Fixture and tile selections for the outdoor shower connected to the primary suite will be handled as part of the primary bathroom scope and extended outdoors. Entry water feature coordination and iguana-resistant landscape direction will be provided in collaboration with the client's selected landscape contractor.</p>
+    </div>
+  </div>
+  <div class="page-footer">
+    <div class="footer-tagline">Style Your Story</div>
+    <div class="footer-contact">juliette@juliettecalaf.com</div>
+  </div>
+</div>
+
+<!-- PAGE 8: DESIGN FEE + PAYMENT -->
+<div class="page">
+  <div class="page-inner">
+    <div class="ph">
+      <div class="ph-logo">juliette CALAF interiors</div>
+      <div class="ph-client">Egozi<br>9700 W. Broadview Drive</div>
+    </div>
+    <div class="ph-rule"></div>
+
+    <div class="sec-num">04</div>
+    <div class="sec-title">Design Fee and Payment</div>
+    <div class="sec-divider"></div>
+
+    <p style="font-size:11px; color:#BF9180; letter-spacing:1.5px; text-transform:uppercase; margin-bottom:18px;">Retainer and Hourly Agreement</p>
+
+    <div class="retainer-box">
+      <div class="retainer-amount">$10,000</div>
+      <div class="retainer-label">Design Retainer — Due Upon Signing</div>
+      <div class="retainer-desc">Non-refundable. Applied as a credit to your account and drawn down against design hours as the project progresses. Once the retainer is fully applied, ongoing services are invoiced monthly in quarter-hour increments.</div>
+    </div>
+
+    <div class="rate-grid">
+      <div class="rate-card">
+        <div class="rate-amount">$225 / hr</div>
+        <div class="rate-role">Principal — Creative Director</div>
+      </div>
+      <div class="rate-card">
+        <div class="rate-amount">$175 / hr</div>
+        <div class="rate-role">Design Staff</div>
+      </div>
+    </div>
+
+    <p class="fee-note" style="margin-top:22px;">All fees are exclusive of FF&amp;E, taxes, shipping, and logistics. Managed services are billed at cost plus 20%. Reimbursable expenses at cost plus 10%.</p>
+  </div>
+  <div class="page-footer">
+    <div class="footer-tagline">Style Your Story</div>
+    <div class="footer-contact">juliette@juliettecalaf.com</div>
+  </div>
+</div>
+
+<!-- PAGE 9: FF&E INVESTMENT RANGES -->
+<div class="page">
+  <div class="page-inner">
+    <div class="ph">
+      <div class="ph-logo">juliette CALAF interiors</div>
+      <div class="ph-client">Egozi<br>9700 W. Broadview Drive</div>
+    </div>
+    <div class="ph-rule"></div>
+
+    <div class="sec-num">05</div>
+    <div class="sec-title">FF&amp;E Investment Ranges</div>
+    <div class="sec-divider"></div>
+
+    <p style="font-size:12px; margin-bottom:18px;">The following reflects current 2026 market pricing at each investment level. All selections are presented for approval before any purchase is made. Bespoke and custom specifications are priced individually.</p>
+
+    <table class="inv-table">
+      <thead>
+        <tr>
+          <th>Item</th>
+          <th>Standard</th>
+          <th>Luxury</th>
+          <th>Premium</th>
+          <th>Bespoke</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>Sofa</td><td>$3,500 – $6,000</td><td>$7,000 – $12,000</td><td>$12,000 – $22,000</td><td>$22,000+</td></tr>
+        <tr><td>Sectional</td><td>$5,000 – $9,000</td><td>$10,000 – $18,000</td><td>$18,000 – $30,000</td><td>$30,000+</td></tr>
+        <tr><td>Lounge Chair</td><td>$2,000 – $3,500</td><td>$4,000 – $8,000</td><td>$8,000 – $15,000</td><td>$15,000+</td></tr>
+        <tr><td>Coffee Table</td><td>$800 – $1,800</td><td>$1,800 – $5,000</td><td>$5,000 – $12,000</td><td>$12,000+</td></tr>
+        <tr><td>Console Table</td><td>$1,500 – $3,500</td><td>$3,500 – $8,000</td><td>$8,000 – $18,000</td><td>$18,000+</td></tr>
+        <tr><td>Dining Table</td><td>$2,500 – $5,000</td><td>$5,000 – $14,000</td><td>$14,000 – $30,000</td><td>$30,000+</td></tr>
+        <tr><td>Dining Chairs (each)</td><td>$600 – $1,500</td><td>$1,500 – $3,500</td><td>$3,500 – $7,000</td><td>$7,000+</td></tr>
+        <tr><td>Area Rug 9x12</td><td>$2,000 – $5,000</td><td>$5,000 – $20,000</td><td>$20,000 – $50,000</td><td>$50,000+</td></tr>
+        <tr><td>King Bed</td><td>$2,500 – $5,000</td><td>$5,000 – $10,000</td><td>$10,000 – $20,000</td><td>$20,000+</td></tr>
+        <tr><td>Nightstands (each)</td><td>$800 – $2,000</td><td>$2,000 – $5,000</td><td>$5,000 – $10,000</td><td>$10,000+</td></tr>
+        <tr><td>Chandelier</td><td>$800 – $2,000</td><td>$2,000 – $8,000</td><td>$8,000 – $20,000</td><td>$20,000+</td></tr>
+        <tr><td>Table Lamp</td><td>$250 – $600</td><td>$600 – $1,800</td><td>$1,800 – $4,000</td><td>$4,000+</td></tr>
+        <tr><td>Custom Drapes (per window)</td><td>$1,500 – $4,000</td><td>$4,000 – $8,000</td><td>$8,000 – $16,000</td><td>$16,000+</td></tr>
+        <tr><td>Artwork</td><td>$500 – $1,500</td><td>$1,500 – $6,000</td><td>$6,000 – $25,000</td><td>$25,000+</td></tr>
+        <tr><td>Runner 3x8</td><td>$800 – $2,000</td><td>$2,000 – $5,000</td><td>$5,000 – $12,000</td><td>$12,000+</td></tr>
+      </tbody>
+    </table>
+    <p class="fee-note">Prices reflect 2026 market rates and exclude taxes, shipping, and logistics.</p>
+  </div>
+  <div class="page-footer">
+    <div class="footer-tagline">Style Your Story</div>
+    <div class="footer-contact">juliette@juliettecalaf.com</div>
+  </div>
+</div>
+
+<!-- PAGE 10: OUR PROCESS + WHAT IS INCLUDED -->
+<div class="page">
+  <div class="page-inner">
+    <div class="ph">
+      <div class="ph-logo">juliette CALAF interiors</div>
+      <div class="ph-client">Egozi<br>9700 W. Broadview Drive</div>
+    </div>
+    <div class="ph-rule"></div>
+
+    <div class="sec-num">06</div>
+    <div class="sec-title">Our Process</div>
+    <div class="sec-divider"></div>
+
+    <div class="two-col">
+      <div>
+        <div class="phase-row">
+          <div class="phase-num">1</div>
+          <div>
+            <div class="phase-title">Conceptual Development</div>
+            <div class="phase-desc">Study of existing conditions, space planning, mood boards, floor plans, and design concepts. Construction timeline and aesthetic direction established.</div>
+          </div>
+        </div>
+        <div class="phase-row">
+          <div class="phase-num">2</div>
+          <div>
+            <div class="phase-title">Design Development</div>
+            <div class="phase-desc">Specification of all finishes, fixtures, furnishings, window coverings, decorative lighting, and custom millwork direction. First design presentation held.</div>
+          </div>
+        </div>
+        <div class="phase-row">
+          <div class="phase-num">3</div>
+          <div>
+            <div class="phase-title">Procurement</div>
+            <div class="phase-desc">Purchasing proposals issued for client approval. No item ordered without a signed proposal and required payment. Vendor coordination and logistics managed by JCI.</div>
+          </div>
+        </div>
+        <div class="phase-row">
+          <div class="phase-num">4</div>
+          <div>
+            <div class="phase-title">Installation</div>
+            <div class="phase-desc">Coordination of delivery, installation, and final styling. Site visits attended as needed and billed hourly under project management.</div>
+          </div>
+        </div>
+        <p style="font-size:10.5px; color:#BF9180; font-style:italic; line-height:1.6; margin-top:10px;">Estimated timeline varies based on scope. Full-scope projects with custom fabrication typically run 18 to 24 months. A detailed project schedule will be provided at kickoff.*</p>
+        <p style="font-size:10px; color:#696161; line-height:1.5; margin-top:8px;">* Timeline depends on scope, client approvals, vendor lead times, and construction schedule.</p>
+      </div>
+
+      <div>
+        <div class="sec-title" style="font-size:17px; margin-bottom:14px;">What is Included</div>
+        <ul class="inc-list">
+          <li><span class="dot"></span>Full creative direction across all four service phases</li>
+          <li><span class="dot"></span>Space planning, mood boards, floor plans, and ceiling plans</li>
+          <li><span class="dot"></span>Finish, fixture, and FF&amp;E selection and specification</li>
+          <li><span class="dot"></span>Custom millwork direction and fabricator coordination</li>
+          <li><span class="dot"></span>Two rounds of revisions per deliverable</li>
+          <li><span class="dot"></span>Procurement management and vendor coordination</li>
+          <li><span class="dot"></span>FF&amp;E logistics and storage coordination</li>
+          <li><span class="dot"></span>Final styling and accessory curation</li>
+          <li><span class="dot"></span>Outdoor furniture and material selections for all exterior spaces</li>
+        </ul>
+        <div class="excl-box">
+          <strong style="font-size:10px; letter-spacing:1px; text-transform:uppercase; color:#3d3a38;">Not Included</strong><br>
+          Permit applications, structural or engineering services, renderings (available as an additional service), revisions beyond two rounds per phase.
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="page-footer">
+    <div class="footer-tagline">Style Your Story</div>
+    <div class="footer-contact">juliette@juliettecalaf.com</div>
+  </div>
+</div>
+
+<!-- PAGE 11: NEXT STEPS -->
+<div class="page next-page">
+  <div class="next-inner">
+    <div>
+      <div style="font-family:'Instrument Serif',Georgia,serif; font-size:13px; color:#98332C; letter-spacing:5px; text-transform:uppercase; margin-bottom:32px;">juliette CALAF interiors</div>
+      <div class="sec-num" style="text-align:center;">Next Steps</div>
+      <div class="sec-title" style="text-align:center; font-size:32px; margin-bottom:12px;">Let's get started.</div>
+      <div class="sec-divider" style="margin: 0 auto 24px;"></div>
+      <p style="max-width: 420px; margin: 0 auto 32px; font-size: 12.5px; color: #696161; line-height: 1.75;">Upon your approval of this proposal, we will send a formal agreement and deposit invoice to secure your project timeline. We look forward to creating something extraordinary together.</p>
+    </div>
+
+    <div class="steps-grid">
+      <div class="step-card">
+        <div class="step-n">Step 01</div>
+        <div class="step-t">Review and approve this proposal</div>
+      </div>
+      <div class="step-card">
+        <div class="step-n">Step 02</div>
+        <div class="step-t">Sign agreement and submit retainer</div>
+      </div>
+      <div class="step-card">
+        <div class="step-n">Step 03</div>
+        <div class="step-t">Project kickoff scheduled</div>
+      </div>
+      <div class="step-card">
+        <div class="step-n">Step 04</div>
+        <div class="step-t">Phase 1 begins — Conceptual Development</div>
+      </div>
+    </div>
+
+    <div style="width:100%; max-width:500px; margin-bottom:32px;">
+      <div style="display:grid; grid-template-columns:1fr 1fr; gap:40px;">
+        <div>
+          <div style="height:1px; background:#BF9180; opacity:0.4; margin-bottom:8px;"></div>
+          <div style="font-size:9px; color:#BF9180; letter-spacing:1.5px; text-transform:uppercase;">Client Signature</div>
+          <div style="margin-top:18px; font-size:9px; color:#BF9180; letter-spacing:1.5px; text-transform:uppercase;">Date</div>
+          <div style="height:1px; background:#BF9180; opacity:0.4; margin-top:6px;"></div>
+        </div>
+        <div>
+          <div style="height:1px; background:#BF9180; opacity:0.4; margin-bottom:8px;"></div>
+          <div style="font-size:9px; color:#BF9180; letter-spacing:1.5px; text-transform:uppercase;">Juliette Calaf, Creative Director</div>
+          <div style="margin-top:18px; font-size:9px; color:#BF9180; letter-spacing:1.5px; text-transform:uppercase;">Date</div>
+          <div style="height:1px; background:#BF9180; opacity:0.4; margin-top:6px;"></div>
+        </div>
+      </div>
+    </div>
+
+    <div>
+      <p style="font-size:12px; color:#BF9180; margin-bottom:6px;">juliette@juliettecalaf.com &nbsp;|&nbsp; www.juliettecalaf.com</p>
+      <p class="footer-tagline" style="font-family:'Instrument Serif',Georgia,serif; font-style:italic; font-size:13px; color:#696161;">Style Your Story</p>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>
